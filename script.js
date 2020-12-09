@@ -1,7 +1,20 @@
 // Write your JavaScript code here!
-window.addEventListener("load", function () {
-   console.log("Page loaded");
+window.addEventListener("load", function() {
+   init();
 });
+
+let pilotName = document.getElementById("pilotName");
+let copilotName = document.getElementById("copilotName");
+let fuelLevel = document.getElementById("fuelLevel");
+let cargoMass = document.getElementById("cargoMass");
+let formSubmit = document.getElementById("formSubmit");
+let pilotStatus = document.getElementById("pilotStatus");
+let copilotStatus = document.getElementById("copilotStatus");
+let faultyItems = document.getElementById("faultyItems");
+let fuelStatus = document.getElementById("fuelStatus");
+let cargoStatus = document.getElementById("cargoStatus");
+let launchStatus = document.getElementById("launchStatus");
+
 
 function init() {
 
@@ -31,18 +44,6 @@ function init() {
       });
    });
 
-
-   let pilotName = document.getElementById("pilotName");
-   let copilotName = document.getElementById("copilotName");
-   let fuelLevel = document.getElementById("fuelLevel");
-   let cargoMass = document.getElementById("cargoMass");
-   let formSubmit = document.getElementById("formSubmit");
-   let pilotStatus = document.getElementById("pilotStatus");
-   let copilotStatus = document.getElementById("copilotStatus");
-   let faultyItems = document.getElementById("faultyItems");
-   let fuelStatus = document.getElementById("fuelStatus");
-   let cargoStatus = document.getElementById("cargoStatus");
-   let launchStatus = document.getElementById("launchStatus");
    
    formSubmit.addEventListener("click", function(event) {
       if (pilotName.value === "" || copilotName.value === "" || fuelLevel.value === "" || cargoMass.value === "") {
@@ -75,14 +76,12 @@ function init() {
          }
          
       }
-
       
    });
 
+};
 
-}
 
-window.onload = init;
 
 /* This block of code shows how to format the HTML once you fetch some planetary JSON!
 <h2>Mission Destination</h2>
